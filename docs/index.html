@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Switch model</title>
+		<meta name="description" content="Switch Model">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+	</head>
+	<body>
+		<a-scene switch_model>
+			<a-assets id="assets">
+				<a-asset-item id="black_cat" src="models/black_cat.glb" data-title="Black Cat" data-shoplink="https://zett-mode-shop.de/MARC-CAIN-E-84.05-J78-Leggings-aus-Kunstleder-schwarz-black-900/4056255516618"></a-asset-item>
+				<a-asset-item id="aqua_wizard" src="models/aqua_wizard.glb" data-title="Aqua Wizard" data-shoplink="https://zett-mode-shop.de/CINQUE-52232423-CIPHILLY-Mesh-Rock-lang-Stretch-Blau-75/4061938371545"></a-asset-item>
+				<a-asset-item id="low_poly_mccree" src="models/low_poly_mccree.glb" data-title="McCree" data-shoplink="https://zett-mode-shop.de/DRYKORN-136166-HURLEY-10-Herren-Sakko-3000/4062843147720"></a-asset-item>
+			</a-assets>
+			
+			<a-gltf-model id="model" src="" position="0 0 -3"></a-gltf-model>
+		</a-scene>
+		<div class="navigation">
+			<div id="header">
+				<div id="title">Title</div>
+				<div>
+					<a id="shop_link" href="https://www.zett-mode.de" target="_blank">Zum Artikel</a>
+				</div>
+			</div>
+			<div id="prev" class="button"><img src="gfx/button_left.svg" alt="Prev"/></div>
+			<div id="next" class="button"><img src="gfx/button_right.svg" alt="Prev"/></div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

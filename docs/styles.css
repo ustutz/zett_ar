@@ -1,0 +1,50 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.navigation {
+	position: absolute;
+	top: 0;
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	justify-items: center;
+	pointer-events: none;
+}
+.button {
+	opacity: 25%;
+	pointer-events: all;
+}
+.button > img {
+	width: 100px;
+}
+.button:hover {
+	opacity: 70%;
+}
+#header {
+	grid-column-start: 2;
+	padding: 10px;
+	top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+#title {
+	font-size: 50px;
+	pointer-events: all;
+}
+#shop_link {
+	pointer-events: all;
+}
+#prev {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	left: 10px;
+}
+#next {
+	grid-column-start: 3;
+	grid-row-start: 2;
+	right: 10px;
+}
