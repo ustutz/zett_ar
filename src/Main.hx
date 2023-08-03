@@ -13,7 +13,7 @@ var currentAssetId = 0;
 var modelElement:Element;
 
 function main() {
-	final assetItems = document.getElementsByTagName( "a-asset-item" );
+	final assetItems = document.getElementsByClassName( "model" );
 	assetIds = [for( element in assetItems ) '#${element.id}'];
 	assetTitles = [for( element in assetItems ) element.dataset.title];
 	assetShopLinks = [for( element in assetItems ) element.dataset.shoplink];

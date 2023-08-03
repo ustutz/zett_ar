@@ -10,6 +10,7 @@
 		<a-scene switch_model>
 			<a-assets>
 				<a-asset-item
+					class="model"
 					id="black_cat"
 					src="https://cdn.glitch.global/ee7b8616-19a3-4ad4-a9d1-eb19867689d8/black_cat.glb?v=1690105704101"
 					data-title="Black Cat"
@@ -17,6 +18,7 @@
 				</a-asset-item>
 				
 				<a-asset-item
+					class="model"
 					id="aqua_wizard"
 					src="https://cdn.glitch.global/ee7b8616-19a3-4ad4-a9d1-eb19867689d8/aqua_wizard.glb?v=1690105974469"
 					data-title="Aqua Wizard"
@@ -24,14 +26,34 @@
 				</a-asset-item>
 
 				<a-asset-item
+					class="model"
 					id="low_poly_mccree"
 					src="https://cdn.glitch.global/ee7b8616-19a3-4ad4-a9d1-eb19867689d8/low_poly_mccree.glb?v=1690296631636"
 					data-title="McCree"
 					data-shoplink="https://zett-mode-shop.de/DRYKORN-136166-HURLEY-10-Herren-Sakko-3000/4062843147720">
 				</a-asset-item>
+				
+				<a-asset-item
+					id="ruler"
+					src="models/ruler.glb">
+				</a-asset-item>
 			</a-assets>
+
+			<a-camera id="camera" position="0 1.6 2"></a-camera>
 			
-			<a-gltf-model id="model" src="" position="0 0 -3"></a-gltf-model>
+			<a-light type="ambient" intensity="1"></a-light>
+
+			<a-gltf-model id="model" src="""></a-gltf-model>
+			<a-gltf-model src="#ruler" position="0.6 0 0"></a-gltf-model>
+			
+			<a-plane
+				id="ground"
+				rotation="-90 0 0"
+				width="1000"
+				height="1000"
+				material="shader: shadow"
+				shadow>
+			</a-plane>
 		</a-scene>
 		<div class="navigation">
 			<div id="header">

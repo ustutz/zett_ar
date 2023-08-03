@@ -2,7 +2,7 @@
 var $global = typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this;
 var Main_modelElement = null;
 function Main_main() {
-	let assetItems = Main_document.getElementsByTagName("a-asset-item");
+	let assetItems = Main_document.getElementsByClassName("model");
 	let _g = [];
 	let _g1 = 0;
 	while(_g1 < assetItems.length) {
