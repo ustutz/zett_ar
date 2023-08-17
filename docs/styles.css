@@ -1,5 +1,7 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #303030;
+	font-size: 100%;
 }
 .navigation {
 	position: absolute;
@@ -7,15 +9,19 @@ body {
 	display: grid;
 	width: 100%;
 	height: 100%;
-	grid-template-columns: 1fr 5fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	justify-items: center;
+	grid-template-columns: 100%;
+	grid-template-rows: 9.95918367346939% 5.22448979591837% 73.9591836734694% 8.24489795918367% 2.61224489795918%;
+	justify-items: stretch;
+	align-items: stretch;
 	pointer-events: none;
 }
+
+.navigation > div {
+	display: flex;
+	justify-content: space-between;
+}
 .button {
-	opacity: 25%;
 	pointer-events: all;
-	margin: 10px;
 }
 .button > img {
 	width: 100%;
@@ -23,28 +29,62 @@ body {
 .button:active {
 	opacity: 70%;
 }
-#header {
-	grid-column-start: 1;
-	grid-column-end: 4;
-	top: 20px;
-	display: flex;
-	flex-direction: column;
+#nav {
+	background-color: white;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	padding-left: 1vh;
+	padding-right: 1vh;
+}
+#nav > div > img {
+	max-width: 100%;
+    max-height: 100%;
+}
+#article {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+	font-size: 3vh;
 	align-items: center;
 }
-#title {
-	font-size: 50px;
-	pointer-events: all;
+#article > #label {
+	font-weight: 400;
+}
+#article > #price {
+	font-weight: 300;
+}
+#shop_button_area {
+	justify-content: center;
 }
 #shop_link {
 	pointer-events: all;
+	background-color: #F0F0F0;
+	padding-top: 1.5%;
+	padding-left: 8%;
+	padding-right: 8%;
+	filter: drop-shadow(8px 10px 0 rgba(0, 0, 0, 0.0625));
+
+	text-align: center;
+	font-size: 4vh;
+	font-weight: 700;
 }
-#prev {
-	grid-column-start: 1;
-	grid-row-start: 2;
-	left: 10px;
+a:link {
+	text-decoration: none;
+	color: #303030;
 }
-#next {
-	grid-column-start: 3;
-	grid-row-start: 2;
-	right: 10px;
+
+a:visited {
+	text-decoration: none;
+	color: #303030;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #303030;
+}
+
+a:active {
+	text-decoration: none;
+	color: #303030;
 }

@@ -16,17 +16,25 @@ function Main_main() {
 	while(_g3 < assetItems.length) {
 		let element = assetItems[_g3];
 		++_g3;
-		_g2.push(element.dataset.title);
+		_g2.push(element.dataset.label);
 	}
-	Main_assetTitles = _g2;
+	Main_assetLabels = _g2;
 	let _g4 = [];
 	let _g5 = 0;
 	while(_g5 < assetItems.length) {
 		let element = assetItems[_g5];
 		++_g5;
-		_g4.push(element.dataset.shoplink);
+		_g4.push(element.dataset.price);
 	}
-	Main_assetShopLinks = _g4;
+	Main_assetPrices = _g4;
+	let _g6 = [];
+	let _g7 = 0;
+	while(_g7 < assetItems.length) {
+		let element = assetItems[_g7];
+		++_g7;
+		_g6.push(element.dataset.shoplink);
+	}
+	Main_assetShopLinks = _g6;
 	AFRAME.registerComponent("switch_model",{ init : function() {
 		Main_modelElement = Main_document.getElementById("model");
 		Main_document.getElementById("prev").addEventListener("click",Main_onPrevClick);
@@ -45,7 +53,8 @@ function Main_onPrevClick(e) {
 function Main_updateModel() {
 	Main_modelElement.removeAttribute("gltf-model");
 	Main_modelElement.setAttribute("gltf-model",Main_assetIds[Main_currentAssetId]);
-	Main_document.getElementById("title").textContent = Main_assetTitles[Main_currentAssetId];
+	Main_document.getElementById("label").textContent = Main_assetLabels[Main_currentAssetId];
+	Main_document.getElementById("price").textContent = Main_assetPrices[Main_currentAssetId];
 	Main_document.getElementById("shop_link").setAttribute("href",Main_assetShopLinks[Main_currentAssetId]);
 }
 class haxe_iterators_ArrayIterator {
@@ -64,7 +73,8 @@ class haxe_iterators_ArrayIterator {
 }
 var Main_document = window.document;
 var Main_assetIds = [];
-var Main_assetTitles = [];
+var Main_assetLabels = [];
+var Main_assetPrices = [];
 var Main_assetShopLinks = [];
 var Main_currentAssetId = 0;
 Main_main();
