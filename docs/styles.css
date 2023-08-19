@@ -60,7 +60,6 @@ body {
 #shop_link {
 	pointer-events: all;
 	background-color: #F0F0F0;
-	padding-top: 1.5%;
 	padding-left: 8%;
 	padding-right: 8%;
 	filter: drop-shadow(8px 10px 0 rgba(0, 0, 0, 0.0625));
@@ -68,6 +67,8 @@ body {
 	text-align: center;
 	font-size: 4vh;
 	font-weight: 700;
+	display: flex;
+	align-items: center;
 }
 a:link {
 	text-decoration: none;
