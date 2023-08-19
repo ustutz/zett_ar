@@ -23,8 +23,14 @@ body {
 .button {
 	pointer-events: all;
 }
-.button > img {
-	width: 100%;
+#prev {
+	text-align: left;
+}
+#logo {
+	text-align: center;
+}
+#next {
+	text-align: right;
 }
 .button:active {
 	opacity: 70%;
